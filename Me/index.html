@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SS GAMES — Play. Explore. Conquer | Premium Gaming Platform</title>
+  <meta name="description" content="Discover and play premium futuristic games on SS GAMES. Featuring high-speed arcade, cyber runners, puzzle grids, and next-gen titles.">
+  <link rel="icon" type="image/jpeg" href="assets/ss-games-logo.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" aria-label="SS GAMES Homepage">
+        <img src="assets/ss-games-logo.jpg" alt="SS GAMES Official Logo" class="brand-logo-img">
+        <div class="brand-titles">
+          <span class="brand-name">SS <span>GAMES</span></span>
+          <span class="brand-tagline">PLAY • EXPLORE • CONQUER</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="games.html">All Games</a></li>
+          <li><a href="about.html">About SS GAMES</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="games.html" class="btn btn-primary btn-sm">Explore Games</a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="section-tag">Next-Gen Gaming Portal</span>
+          <h1 class="hero-title">
+            Enter the Future of <br>
+            <span class="text-gradient">Web Gaming.</span>
+          </h1>
+          <p class="hero-desc">
+            Welcome to SS GAMES. Immerse yourself in hyper-speed cyber action, cosmic dogfights, and mind-bending puzzle matrices built for modern web browsers.
+          </p>
+          <div class="hero-actions">
+            <a href="#featured" class="btn btn-primary">
+              <span>Play Featured Games</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+            </a>
+            <a href="games.html" class="btn btn-secondary">
+              <span>Browse All Games</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-graphic">
+          <div class="hero-logo-frame">
+            <img src="assets/ss-games-logo.jpg" alt="SS GAMES Cyber Logo Emblazoned">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Structured Ad Slot (Future Monetization Ready) -->
+    <div class="container">
+      <div class="ad-slot-container" aria-label="Sponsorship Area">
+        <div class="ad-slot-header">Ad Space • Reserved For Future Partner Integrations</div>
+        <div class="ad-slot-banner">
+          <span>[ SS GAMES Partner Banner — Placement Reserved ]</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Games Section -->
+    <section class="section-padding" id="featured">
+      <div class="container">
+        <span class="section-tag">Editor's Pick</span>
+        <h2 class="section-heading">Featured <span class="text-gradient">Experiences</span></h2>
+        <p class="section-subtext">
+          Hand-picked titles optimized for instant gameplay directly in your browser without downloads.
+        </p>
+        <div class="games-grid" id="featuredGamesContainer">
+          <!-- Populated dynamically by script.js using games-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- New Releases Section -->
+    <section class="section-padding section-alt">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="section-tag">Fresh Launches</span>
+            <h2 class="section-heading" style="margin-bottom: 0;">New <span class="text-gradient">Releases</span></h2>
+          </div>
+          <a href="games.html" class="btn btn-secondary btn-sm">View Full Library &rarr;</a>
+        </div>
+        <div class="games-grid" id="newReleasesContainer">
+          <!-- Populated dynamically by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About SS GAMES Section Preview -->
+    <section class="section-padding">
+      <div class="container about-preview-grid">
+        <div>
+          <span class="section-tag">Our Philosophy</span>
+          <h2 class="section-heading">Built For Players, <br><span class="text-gradient">Powered by Innovation.</span></h2>
+          <p class="section-subtext" style="margin-bottom: 1.5rem;">
+            SS GAMES is engineered to push the boundaries of browser gaming. Our mission is to combine sleek cyberpunk aesthetics with seamless 60 FPS gameplay, delivering instant entertainment with zero hassle.
+          </p>
+          <a href="about.html" class="btn btn-secondary">Learn Our Story</a>
+        </div>
+
+        <div class="pill-list">
+          <div class="pill-item">
+            <div class="pill-icon">⚡</div>
+            <div>
+              <div class="pill-title">Fast-Loading & No Downloads</div>
+              <div class="pill-desc">Instant play directly via HTML5 Canvas and WebGL standards on any modern device.</div>
+            </div>
+          </div>
+          <div class="pill-item">
+            <div class="pill-icon">🎮</div>
+            <div>
+              <div class="pill-title">Curated Gaming Quality</div>
+              <div class="pill-desc">Every game is vetted for high replayability, responsive controls, and immersive design.</div>
+            </div>
+          </div>
+          <div class="pill-item">
+            <div class="pill-icon">🛡️</div>
+            <div>
+              <div class="pill-title">Safe, Transparent & Free</div>
+              <div class="pill-desc">No deceptive paywalls or dark patterns. Pure gameplay built with integrity.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Official Contact Section Callout -->
+    <section class="section-padding section-alt" id="contact">
+      <div class="container" style="text-align: center;">
+        <span class="section-tag">Direct Inquiries</span>
+        <h2 class="section-heading">Connect With <span class="text-gradient">SS GAMES</span></h2>
+        <p class="section-subtext" style="margin: 0 auto 2rem;">
+          Whether you are an independent game developer interested in publishing your title on our platform, or a gamer providing feedback, reach out to our official desk.
+        </p>
+        <div style="display: inline-flex; flex-direction: column; align-items: center; gap: 1rem;">
+          <a href="mailto:ss.games.official.1@gmail.com" class="official-email-link">
+            ss.games.official.1@gmail.com
+          </a>
+          <a href="mailto:ss.games.official.1@gmail.com" class="btn btn-primary">
+            <span>Send Email to SS GAMES</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Professional Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link">
+            <img src="assets/ss-games-logo.jpg" alt="SS GAMES Logo" class="brand-logo-img">
+            <span class="brand-name">SS <span>GAMES</span></span>
+          </a>
+          <p>
+            PLAY. EXPLORE. CONQUER. SS GAMES is a premier indie gaming destination delivering lightweight, high-performance web browser games.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">All Games</a></li>
+            <li><a href="about.html">About SS GAMES</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Legal & Policies</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="contact.html">Developer Submission</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Official Contact</h4>
+          <p style="font-size: 0.88rem; color: #94a3b8; margin-bottom: 0.75rem;">
+            For brand sponsorships, game submissions, or support:
+          </p>
+          <a href="mailto:ss.games.official.1@gmail.com" class="btn btn-secondary btn-sm" style="font-size: 0.78rem;">
+            ss.games.official.1@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 SS GAMES. All rights reserved.</div>
+        <div>Engineered with pure HTML5, CSS3, and JavaScript.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data/games-data.js?v=2"></script>
+  <script src="script.js?v=2"></script>
+</body>
+</html>
