@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Games Catalog — SS GAMES</title>
+  <meta name="description" content="Explore the full catalog of SS GAMES. Filter by Arcade, Action, Puzzle, Adventure, and Simulation genres.">
+  <link rel="icon" type="image/jpeg" href="assets/ss-games-logo.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" aria-label="SS GAMES Homepage">
+        <img src="assets/ss-games-logo.jpg" alt="SS GAMES Official Logo" class="brand-logo-img">
+        <div class="brand-titles">
+          <span class="brand-name">SS <span>GAMES</span></span>
+          <span class="brand-tagline">PLAY • EXPLORE • CONQUER</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html" class="active">All Games</a></li>
+          <li><a href="about.html">About SS GAMES</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-secondary btn-sm">Support</a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <span class="section-tag">Complete Library</span>
+        <h1>Explore All <span class="text-gradient">SS Games</span></h1>
+        <p class="section-subtext" style="margin: 0 auto;">
+          Browse our evolving galaxy of browser-ready games. Filter by category, search by title, and jump right into the action.
+        </p>
+      </div>
+    </section>
+
+    <!-- Games Explorer Section -->
+    <section class="section-padding" style="padding-top: 3rem;">
+      <div class="container">
+        
+        <!-- Search & Filter Controls -->
+        <div class="games-toolbar">
+          <div class="search-wrapper">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="gameSearchInput" class="search-input" placeholder="Search by game title, description, or keyword..." aria-label="Search games">
+          </div>
+
+          <div class="category-filters" role="group" aria-label="Filter games by genre">
+            <span style="font-size: 0.85rem; color: #64748b; font-weight: 700; text-transform: uppercase; margin-right: 0.5rem;">Categories:</span>
+            <button class="filter-btn active" data-category="all">All Genres</button>
+            <button class="filter-btn" data-category="Action">Action</button>
+            <button class="filter-btn" data-category="Arcade">Arcade</button>
+            <button class="filter-btn" data-category="Puzzle">Puzzle</button>
+            <button class="filter-btn" data-category="Adventure">Adventure</button>
+            <button class="filter-btn" data-category="Simulation">Simulation</button>
+          </div>
+        </div>
+
+        <!-- All Games Grid -->
+        <div class="games-grid" id="allGamesContainer">
+          <!-- Dynamically populated by script.js -->
+        </div>
+
+        <!-- Structured Future Ad Placement -->
+        <div class="ad-slot-container" style="margin-top: 4rem;">
+          <div class="ad-slot-header">Ad Space • Reserved For Future Partner Integrations</div>
+          <div class="ad-slot-banner">
+            <span>[ SS GAMES Horizontal Leaderboard Slot ]</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link">
+            <img src="assets/ss-games-logo.jpg" alt="SS GAMES Logo" class="brand-logo-img">
+            <span class="brand-name">SS <span>GAMES</span></span>
+          </a>
+          <p>
+            PLAY. EXPLORE. CONQUER. SS GAMES is a premier indie gaming destination delivering lightweight, high-performance web browser games.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">All Games</a></li>
+            <li><a href="about.html">About SS GAMES</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Legal & Policies</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="contact.html">Submit Your Game</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Official Contact</h4>
+          <p style="font-size: 0.88rem; color: #94a3b8; margin-bottom: 0.75rem;">
+            Questions or suggestions? Contact us:
+          </p>
+          <a href="mailto:ss.games.official.1@gmail.com" class="btn btn-secondary btn-sm" style="font-size: 0.78rem;">
+            ss.games.official.1@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 SS GAMES. All rights reserved.</div>
+        <div>Free web entertainment engineered for gamers worldwide.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data/games-data.js?v=2"></script>
+  <script src="script.js?v=2"></script>
+</body>
+</html>
