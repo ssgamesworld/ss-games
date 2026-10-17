@@ -1,0 +1,6 @@
+# robots.txt for SS GAMES (https://ss-games.pages.dev/)
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://ss-games.pages.dev/sitemap.xml
