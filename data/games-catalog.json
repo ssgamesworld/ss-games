@@ -1,0 +1,602 @@
+[
+  {
+    "id": "retro-snake",
+    "title": "Retro Snake",
+    "cat": "Arcade",
+    "desc": "Classic snake game! Eat glowing pellets, grow longer and avoid crashing into walls or yourself."
+  },
+  {
+    "id": "flappy-sky",
+    "title": "Flappy Sky",
+    "cat": "Arcade",
+    "desc": "Tap to flap your wings and navigate safely through tricky pipes in the sky."
+  },
+  {
+    "id": "neon-pong",
+    "title": "Neon Pong",
+    "cat": "Arcade",
+    "desc": "Fast-paced neon paddle battle against smart AI. Don't let the ball pass!"
+  },
+  {
+    "id": "galactic-invaders",
+    "title": "Galactic Invaders",
+    "cat": "Action",
+    "desc": "Retro space shooter. Shoot down waves of descending alien fleets and dodge lasers."
+  },
+  {
+    "id": "brick-smasher",
+    "title": "Brick Smasher",
+    "cat": "Arcade",
+    "desc": "Bounce the power ball with your paddle to shatter neon brick formations."
+  },
+  {
+    "id": "memory-flip",
+    "title": "Memory Flip",
+    "cat": "Puzzle",
+    "desc": "Test your brain! Flip pairs of cards to match symbols before the clock runs out."
+  },
+  {
+    "id": "tic-tac-toe-pro",
+    "title": "Tic Tac Toe Pro",
+    "cat": "Strategy",
+    "desc": "Classic X and O tactical battle against unbeatable AI or a friend."
+  },
+  {
+    "id": "2048-master",
+    "title": "2048 Master",
+    "cat": "Puzzle",
+    "desc": "Swipe numbers, merge matching tiles, and reach the legendary 2048 tile!"
+  },
+  {
+    "id": "cyber-runner",
+    "title": "Cyber Runner",
+    "cat": "Action",
+    "desc": "Endless 2D obstacle runner. Jump and duck to avoid barriers and beat high scores."
+  },
+  {
+    "id": "whack-a-mole",
+    "title": "Whack A Mole",
+    "cat": "Hyper-Casual",
+    "desc": "Fast reflexes required! Whack moles popping out of holes before they disappear."
+  },
+  {
+    "id": "asteroid-dodge",
+    "title": "Asteroid Dodge",
+    "cat": "Space & Sci-Fi",
+    "desc": "Pilot your spaceship through a dense asteroid field collecting energy crystals."
+  },
+  {
+    "id": "color-matcher",
+    "title": "Color Matcher",
+    "cat": "Hyper-Casual",
+    "desc": "Match the rotating color wheel with falling orbs to score high combos."
+  },
+  {
+    "id": "stack-tower",
+    "title": "Stack Tower",
+    "cat": "Hyper-Casual",
+    "desc": "Time your taps perfectly to stack moving blocks as high into the sky as possible."
+  },
+  {
+    "id": "bubble-pop",
+    "title": "Bubble Pop",
+    "cat": "Hyper-Casual",
+    "desc": "Pop floating vibrant bubbles before they hit top spikes. Fast and addictive!"
+  },
+  {
+    "id": "speed-clicker",
+    "title": "Speed Clicker",
+    "cat": "Hyper-Casual",
+    "desc": "Test your clicking speed! How many taps can you achieve in 10 seconds?"
+  },
+  {
+    "id": "piano-tiles-neon",
+    "title": "Piano Tiles Neon",
+    "cat": "Arcade",
+    "desc": "Tap only the black/neon keys to the musical rhythm. Don't touch the blank tiles!"
+  },
+  {
+    "id": "gravity-switch",
+    "title": "Gravity Switch",
+    "cat": "Action",
+    "desc": "Invert gravity with a single tap to run along ceilings and floors through spikes."
+  },
+  {
+    "id": "minesweeper-classic",
+    "title": "Minesweeper Classic",
+    "cat": "Puzzle",
+    "desc": "Clear the minefield using deduction and number clues without triggering bombs."
+  },
+  {
+    "id": "doodle-jump-mini",
+    "title": "Doodle Jump Mini",
+    "cat": "Arcade",
+    "desc": "Bounce continually upwards on bouncy platforms and avoid falling into the abyss."
+  },
+  {
+    "id": "zigzag-ball",
+    "title": "Zigzag Ball",
+    "cat": "Hyper-Casual",
+    "desc": "Tap to switch ball direction along narrow zigzag pathways without dropping off."
+  },
+  {
+    "id": "fruit-slicer",
+    "title": "Fruit Slicer",
+    "cat": "Action",
+    "desc": "Swipe to slice flying juicy fruits into halves while avoiding dangerous bombs."
+  },
+  {
+    "id": "laser-defender",
+    "title": "Laser Defender",
+    "cat": "Action",
+    "desc": "Rotate your base laser cannon to blast incoming meteor missiles."
+  },
+  {
+    "id": "knife-hit-blitz",
+    "title": "Knife Hit Blitz",
+    "cat": "Hyper-Casual",
+    "desc": "Throw knives into rotating wooden targets without hitting previously thrown knives."
+  },
+  {
+    "id": "helix-bounce",
+    "title": "Helix Bounce",
+    "cat": "Hyper-Casual",
+    "desc": "Guide a bouncing ball down a rotating helix tower through safe color gaps."
+  },
+  {
+    "id": "crossy-roadway",
+    "title": "Crossy Roadway",
+    "cat": "Arcade",
+    "desc": "Hop across busy highways, rushing rivers, and train tracks without getting squashed."
+  },
+  {
+    "id": "pacman-maze",
+    "title": "Pac Maze Retro",
+    "cat": "Arcade",
+    "desc": "Navigate the maze eating all dots while outsmarting roaming ghost chasers."
+  },
+  {
+    "id": "tetris-blocks",
+    "title": "Tetris Blocks",
+    "cat": "Puzzle",
+    "desc": "Rotate and drop falling geometric blocks to clear solid horizontal lines."
+  },
+  {
+    "id": "connect-four",
+    "title": "Connect Four",
+    "cat": "Strategy",
+    "desc": "Drop colored discs into vertical slots to connect 4 in a row before your opponent."
+  },
+  {
+    "id": "word-scramble",
+    "title": "Word Scramble",
+    "cat": "Puzzle",
+    "desc": "Unscramble jumbled letters to find the hidden English words against the clock."
+  },
+  {
+    "id": "checkers-pro",
+    "title": "Checkers Pro",
+    "cat": "Card & Board",
+    "desc": "Classic 8x8 draughts board game. Jump over opponent pieces to crown kings!"
+  },
+  {
+    "id": "air-hockey-neon",
+    "title": "Air Hockey Neon",
+    "cat": "Sports",
+    "desc": "Fast-sliding neon air hockey puck battle against aggressive computer bot."
+  },
+  {
+    "id": "archery-master",
+    "title": "Archery Master",
+    "cat": "Sports",
+    "desc": "Aim bow and arrow accounting for wind speed to hit bullseyes on the target."
+  },
+  {
+    "id": "basketball-dunk",
+    "title": "Basketball Dunk",
+    "cat": "Sports",
+    "desc": "Flick basketballs into moving hoops to build consecutive swish combos."
+  },
+  {
+    "id": "soccer-penalty",
+    "title": "Soccer Penalty",
+    "cat": "Sports",
+    "desc": "Swipe with spin to bend soccer balls past the diving goalkeeper into the net."
+  },
+  {
+    "id": "bowling-strike",
+    "title": "Bowling Strike",
+    "cat": "Sports",
+    "desc": "Roll bowling balls with spin to knock down all 10 pins for a perfect strike."
+  },
+  {
+    "id": "dart-master",
+    "title": "Dart Master",
+    "cat": "Sports",
+    "desc": "Aim and throw darts to hit the treble 20 and bullseye in classic 501 countdown."
+  },
+  {
+    "id": "mini-golf-world",
+    "title": "Mini Golf World",
+    "cat": "Sports",
+    "desc": "Angle and power your putts across tricky windmills, ramps, and water hazards."
+  },
+  {
+    "id": "skate-rush",
+    "title": "Skate Rush",
+    "cat": "Sports",
+    "desc": "Ollie and grind on rails across street pavements avoiding trash bins."
+  },
+  {
+    "id": "turbo-racing-2d",
+    "title": "Turbo Racing 2D",
+    "cat": "Action",
+    "desc": "Top-down retro car racing. Drift corners and overtake rival race cars to win."
+  },
+  {
+    "id": "bumper-cars",
+    "title": "Bumper Cars",
+    "cat": "Arcade",
+    "desc": "Smash rival bumper cars off the arena ring until you are the last car running."
+  },
+  {
+    "id": "stickman-duel",
+    "title": "Stickman Duel",
+    "cat": "Action",
+    "desc": "Ragdoll stickman combat with swords, punches, and flying jump kicks."
+  },
+  {
+    "id": "ninja-slash",
+    "title": "Ninja Slash",
+    "cat": "Action",
+    "desc": "Slice through waves of flying ninja shurikens and shadows with swift katana slashes."
+  },
+  {
+    "id": "samurai-reflex",
+    "title": "Samurai Reflex",
+    "cat": "Action",
+    "desc": "A test of pure reaction time! Draw your blade the split second the signal flashes."
+  },
+  {
+    "id": "tank-battle-city",
+    "title": "Tank Battle City",
+    "cat": "Action",
+    "desc": "Command your battle tank, blast brick walls, and protect your headquarters."
+  },
+  {
+    "id": "missile-command",
+    "title": "Missile Command",
+    "cat": "Action",
+    "desc": "Launch defensive anti-air flak bursts to protect coastal cities from incoming ICBMs."
+  },
+  {
+    "id": "alien-shooter",
+    "title": "Alien Shooter 2D",
+    "cat": "Space & Sci-Fi",
+    "desc": "Top-down survival shooter against swarms of crawling extraterrestrial bugs."
+  },
+  {
+    "id": "zombie-outbreak",
+    "title": "Zombie Outbreak",
+    "cat": "Action",
+    "desc": "Barricade windows and fend off hordes of pixel zombies with shotguns."
+  },
+  {
+    "id": "cowboy-quickdraw",
+    "title": "Cowboy Quickdraw",
+    "cat": "Action",
+    "desc": "Wild West high noon showdown. Wait for the 'DRAW!' signal and tap faster than outlaw."
+  },
+  {
+    "id": "knight-jump",
+    "title": "Knight Jump",
+    "cat": "Arcade",
+    "desc": "Climb castle ramparts, dodge falling boulders, and defeat goblin archers."
+  },
+  {
+    "id": "shadow-ninja",
+    "title": "Shadow Ninja",
+    "cat": "Action",
+    "desc": "Sneak through rooftop guards in stealth or strike from the shadows with kunai."
+  },
+  {
+    "id": "sudoku-classic",
+    "title": "Sudoku Classic",
+    "cat": "Puzzle",
+    "desc": "Fill 9x9 grid with digits 1 through 9 without repeating in rows, columns, or boxes."
+  },
+  {
+    "id": "nonogram-logic",
+    "title": "Nonogram Logic",
+    "cat": "Puzzle",
+    "desc": "Picture cross logic puzzle. Reveal pixel art images using row and column numbers."
+  },
+  {
+    "id": "slide-puzzle-15",
+    "title": "Slide Puzzle 15",
+    "cat": "Puzzle",
+    "desc": "Slide scrambled numbered tiles into orderly numerical sequence 1 through 15."
+  },
+  {
+    "id": "simon-says-audio",
+    "title": "Simon Says Audio",
+    "cat": "Puzzle",
+    "desc": "Memorize and repeat escalating sequences of colorful flashing musical lights."
+  },
+  {
+    "id": "brain-math-quiz",
+    "title": "Brain Math Quiz",
+    "cat": "Puzzle",
+    "desc": "Rapid mental math arithmetic challenge. Solve equations before timer runs out!"
+  },
+  {
+    "id": "word-search-grid",
+    "title": "Word Search Grid",
+    "cat": "Puzzle",
+    "desc": "Find words hidden horizontally, vertically, and diagonally in letter matrices."
+  },
+  {
+    "id": "hangman-word",
+    "title": "Hangman Word",
+    "cat": "Puzzle",
+    "desc": "Guess the mystery word letter-by-letter before drawing the complete figure."
+  },
+  {
+    "id": "water-sort-puzzle",
+    "title": "Water Sort Puzzle",
+    "cat": "Puzzle",
+    "desc": "Pour colored liquids between test tubes until each tube contains a single color."
+  },
+  {
+    "id": "pipe-connector",
+    "title": "Pipe Connector",
+    "cat": "Puzzle",
+    "desc": "Rotate elbow and straight pipes to connect water source cleanly to outlet."
+  },
+  {
+    "id": "maze-escape-2d",
+    "title": "Maze Escape 2D",
+    "cat": "Puzzle",
+    "desc": "Find path from maze start to exit before light torch burns out."
+  },
+  {
+    "id": "jigsaw-mini",
+    "title": "Jigsaw Mini",
+    "cat": "Puzzle",
+    "desc": "Drag and snap interlocking puzzle pieces together to complete colorful pictures."
+  },
+  {
+    "id": "spot-difference",
+    "title": "Spot The Difference",
+    "cat": "Puzzle",
+    "desc": "Compare two side-by-side scenes and click all 5 subtle hidden differences."
+  },
+  {
+    "id": "solitaire-classic",
+    "title": "Solitaire Classic",
+    "cat": "Card & Board",
+    "desc": "Klondike card patience. Build card foundation suits from Ace to King."
+  },
+  {
+    "id": "freecell-pro",
+    "title": "Freecell Pro",
+    "cat": "Card & Board",
+    "desc": "Strategic 8-column card solitaire where almost every deal is winnable."
+  },
+  {
+    "id": "spider-solitaire",
+    "title": "Spider Solitaire",
+    "cat": "Card & Board",
+    "desc": "Assemble complete descending 13-card runs from King down to Ace in same suit."
+  },
+  {
+    "id": "blackjack-21",
+    "title": "Blackjack 21",
+    "cat": "Card & Board",
+    "desc": "Beat dealer card total without exceeding 21. Hit, stand, double down, or split!"
+  },
+  {
+    "id": "poker-hands",
+    "title": "Poker Hands Video",
+    "cat": "Card & Board",
+    "desc": "Jacks or Better video poker. Hold best cards and draw to make winning hands."
+  },
+  {
+    "id": "uno-match-cards",
+    "title": "Uno Match Cards",
+    "cat": "Card & Board",
+    "desc": "Match cards by color or number. Play Wilds, Skips, and Draw Fours to empty hand."
+  },
+  {
+    "id": "domino-chain",
+    "title": "Domino Chain",
+    "cat": "Card & Board",
+    "desc": "Match pip ends on table dominoes to place all your tiles before computer."
+  },
+  {
+    "id": "ludo-dice-mini",
+    "title": "Ludo Dice Mini",
+    "cat": "Card & Board",
+    "desc": "Roll sixes, move 4 tokens around cross board, and race them home safely."
+  },
+  {
+    "id": "pinball-arcade",
+    "title": "Pinball Arcade",
+    "cat": "Arcade",
+    "desc": "Flippers up! Keep metal ball bouncing off bumpers, ramps, and jackpot targets."
+  },
+  {
+    "id": "breakout-neon",
+    "title": "Breakout Neon",
+    "cat": "Arcade",
+    "desc": "Modern neon aesthetic breakout with laser paddles and multiball powerups."
+  },
+  {
+    "id": "frogger-leap",
+    "title": "Frogger Leap",
+    "cat": "Arcade",
+    "desc": "Guide frogs across dangerous vehicle highways and floating river logs safely."
+  },
+  {
+    "id": "lunar-lander",
+    "title": "Lunar Lander",
+    "cat": "Space & Sci-Fi",
+    "desc": "Control thrusters with limited fuel to gently land spacecraft on rocky moon pad."
+  },
+  {
+    "id": "tron-light-cycles",
+    "title": "Tron Light Cycles",
+    "cat": "Arcade",
+    "desc": "Leave neon light walls behind your cycle and trap opponent into crashing."
+  },
+  {
+    "id": "qbert-hopper",
+    "title": "Qbert Hopper",
+    "cat": "Arcade",
+    "desc": "Hop diagonal isometric pyramid cubes to change all surface step colors."
+  },
+  {
+    "id": "dig-dug-miner",
+    "title": "Dig Dug Miner",
+    "cat": "Arcade",
+    "desc": "Dig underground tunnels, pop underground dragons, and drop giant rocks."
+  },
+  {
+    "id": "centipede-defense",
+    "title": "Centipede Defense",
+    "cat": "Arcade",
+    "desc": "Shoot descending multi-segmented centipede winding down through mushroom patch."
+  },
+  {
+    "id": "galaga-waves",
+    "title": "Galaga Waves",
+    "cat": "Space & Sci-Fi",
+    "desc": "Dodge looping insect alien squadrons and rescue captured dual-fighter ships."
+  },
+  {
+    "id": "space-harrier-2d",
+    "title": "Space Harrier 2D",
+    "cat": "Action",
+    "desc": "Fly forward across checkerboard horizons blasting alien monoliths and dragons."
+  },
+  {
+    "id": "gunfight-saloon",
+    "title": "Gunfight Saloon",
+    "cat": "Action",
+    "desc": "Shoot bandit targets popping out of saloon windows while sparing innocents."
+  },
+  {
+    "id": "beat-saber-2d",
+    "title": "Beat Saber 2D",
+    "cat": "Arcade",
+    "desc": "Rhythm slicer! Swipe arrows on incoming rhythm cubes matching the beat."
+  },
+  {
+    "id": "subway-skate",
+    "title": "Subway Skate",
+    "cat": "Arcade",
+    "desc": "Skateboard along train tracks dodging oncoming railcars and barriers."
+  },
+  {
+    "id": "tower-defense-mini",
+    "title": "Tower Defense Mini",
+    "cat": "Strategy",
+    "desc": "Place arrow, cannon, and freeze towers along path to stop marching enemy creeps."
+  },
+  {
+    "id": "idle-cookie-clicker",
+    "title": "Cookie Clicker Mini",
+    "cat": "Hyper-Casual",
+    "desc": "Click giant golden cookie to bake billions of cookies and buy automated bakeries."
+  },
+  {
+    "id": "idle-gold-mine",
+    "title": "Idle Gold Mine",
+    "cat": "Strategy",
+    "desc": "Hire pickaxe miners, upgrade shafts, and collect massive underground gold fortunes."
+  },
+  {
+    "id": "tap-tap-revenge",
+    "title": "Tap Tap Revenge",
+    "cat": "Arcade",
+    "desc": "Catch rhythm notes falling on 3 tracks precisely as they touch the strike line."
+  },
+  {
+    "id": "geometry-dash-lite",
+    "title": "Geometry Dash Lite",
+    "cat": "Action",
+    "desc": "Rhythm-based platformer. One mistake resets! Jump over spikes to electronic beats."
+  },
+  {
+    "id": "paper-airplane",
+    "title": "Paper Airplane Flight",
+    "cat": "Hyper-Casual",
+    "desc": "Glide paper plane through living room currents, dodging chairs and fans."
+  },
+  {
+    "id": "flappy-rocket",
+    "title": "Flappy Rocket",
+    "cat": "Space & Sci-Fi",
+    "desc": "Pulse rocket boosters to maneuver through planetary cavern formations."
+  },
+  {
+    "id": "fish-feeding-frenzy",
+    "title": "Fish Feeding Frenzy",
+    "cat": "Arcade",
+    "desc": "Eat smaller fish to grow bigger while swimming away from gigantic sharks."
+  },
+  {
+    "id": "ant-smasher",
+    "title": "Ant Smasher",
+    "cat": "Hyper-Casual",
+    "desc": "Tap rapidly to squash marching trail ants before they steal bakery sweets."
+  },
+  {
+    "id": "bubble-bobble-mini",
+    "title": "Bubble Bobble Mini",
+    "cat": "Arcade",
+    "desc": "Trap monsters inside floating bubbles and pop them to collect fruit points."
+  },
+  {
+    "id": "bomberman-arena",
+    "title": "Bomberman Arena",
+    "cat": "Strategy",
+    "desc": "Drop timed bomb explosives in grid maze to blast crates and corner rivals."
+  },
+  {
+    "id": "digging-mole",
+    "title": "Digging Mole",
+    "cat": "Arcade",
+    "desc": "Dig deep into earth avoiding lava pockets while collecting gemstones."
+  },
+  {
+    "id": "jetpack-joy-2d",
+    "title": "Jetpack Joy 2D",
+    "cat": "Action",
+    "desc": "Hold tap to fire bullet-powered jetpack and soar over zappers and missiles."
+  },
+  {
+    "id": "duck-hunt-retro",
+    "title": "Duck Hunt Retro",
+    "cat": "Arcade",
+    "desc": "Click flying wild ducks as they take off from marsh grass before they escape."
+  },
+  {
+    "id": "spin-wheel-fortune",
+    "title": "Spin Wheel Fortune",
+    "cat": "Hyper-Casual",
+    "desc": "Spin colorful carnival wheel to test your luck and unlock jackpot prizes."
+  },
+  {
+    "id": "plinko-drop-neon",
+    "title": "Plinko Drop Neon",
+    "cat": "Hyper-Casual",
+    "desc": "Drop glowing balls down peg board to bounce into high-multiplier bottom bins."
+  },
+  {
+    "id": "neon-pinball-retro",
+    "title": "Neon Pinball Retro",
+    "cat": "Arcade",
+    "desc": "Retro vector glow pinball machine with gravity loops and score ramps."
+  }
+]

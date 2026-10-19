@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Shadow Sniper Elite | SS GAMES</title>
+  <meta name="description" content="Engage in precision long-range sniper marksmanship. Calculate wind speed, hold breath, and eliminate rogue mercenaries with lethal headshots.">
+
+  <!-- Google Fonts: Orbitron & Rajdhani for Military Tactical HUD -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/game.css">
+
+  <!-- Phaser 3.60 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+</head>
+<body>
+  <div id="game-viewport">
+    <div id="canvas-container"></div>
+
+    <!-- Tactical Sniper HUD -->
+    <div class="sniper-hud">
+      <div class="hud-box">
+        <div class="brand-title"><span>SHADOW</span> SNIPER ELITE</div>
+        <div class="mission-text" id="mission-text">STAGE 1: Eliminate <strong>4 Targets</strong></div>
+      </div>
+
+      <!-- Center Wind & Ballistic Calculator -->
+      <div id="wind-val" class="wind-indicator">
+        WIND: 2.4 MPH ▶
+      </div>
+
+      <div class="hud-box stats-panel">
+        <div class="score-display"><span id="score-val">0</span> PTS</div>
+        <div class="ammo-row" id="ammo-row">
+          <div class="bullet-icon"></div>
+          <div class="bullet-icon"></div>
+          <div class="bullet-icon"></div>
+          <div class="bullet-icon"></div>
+          <div class="bullet-icon"></div>
+        </div>
+      </div>
+
+      <a href="../../games.html" class="exit-btn">← GAMES</a>
+    </div>
+
+    <!-- Steady Breath Indicator -->
+    <div class="steady-bar-container">
+      <span>STEADY AIM [SHIFT]</span>
+      <div class="steady-track">
+        <div id="steady-bar" class="steady-fill"></div>
+      </div>
+    </div>
+
+    <!-- Start / Briefing Modal -->
+    <div id="start-modal" class="game-modal">
+      <h1 class="modal-title">SHADOW SNIPER ELITE</h1>
+      <p class="modal-sub">
+        You are positioned on a high desert ridge overlooking a rogue fortress outpost.
+        <br><br>
+        🎯 <strong>Aim with Mouse / Touch</strong> & <strong>Click to Fire</strong>.
+        <br>💨 <strong>Account for Wind Speed</strong> indicated at the top!
+        <br>🫁 <strong>Hold SHIFT</strong> to stabilize reticle sway.
+        <br>💥 Aim for the head for high-score <strong>HEADSHOTS</strong>!
+      </p>
+      <button id="btn-start" class="btn-action">COMMENCE MISSION</button>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div id="game-over-modal" class="game-modal" style="display: none;">
+      <h1 class="modal-title" style="background: linear-gradient(135deg, #ef4444, #f43f5e); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">MISSION FAILED</h1>
+      <p class="modal-sub">
+        Out of ammunition before neutralizing all hostiles.<br>
+        Final Score: <strong id="final-score" style="color: #ffd700; font-size: 22px;">0</strong> PTS
+      </p>
+      <button id="btn-retry" class="btn-action">RETRY OPERATION</button>
+    </div>
+
+    <!-- Victory Modal -->
+    <div id="victory-modal" class="game-modal" style="display: none;">
+      <h1 class="modal-title">OPERATION ACCOMPLISHED</h1>
+      <p class="modal-sub">
+        All rogue targets neutralized across all sectors. Superior marksmanship confirmed!<br>
+        Total Score: <strong id="victory-score" style="color: #00f0ff; font-size: 24px;">0</strong> PTS
+      </p>
+      <button id="btn-restart" class="btn-action">DEPLOY AGAIN</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/assets.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/game.js"></script>
+
+  <script>
+    window.sniperTouch = {
+      holdBreath: false
+    };
+
+    // Phaser 3 Config
+    const config = {
+      type: Phaser.AUTO,
+      parent: 'canvas-container',
+      width: 1200,
+      height: 600,
+      physics: {
+        default: 'arcade',
+        arcade: {
+          gravity: { y: 0 },
+          debug: false
+        }
+      },
+      scene: [SniperGameScene]
+    };
+
+    let gameInstance = null;
+
+    document.getElementById('btn-start').addEventListener('click', () => {
+      document.getElementById('start-modal').style.display = 'none';
+      if (!gameInstance) {
+        gameInstance = new Phaser.Game(config);
+      }
+      if (window.sniperAudio) {
+        window.sniperAudio.init();
+      }
+    });
+
+    document.getElementById('btn-retry').addEventListener('click', () => {
+      document.getElementById('game-over-modal').style.display = 'none';
+      if (gameInstance) {
+        gameInstance.scene.scenes[0].scene.restart();
+      }
+    });
+
+    document.getElementById('btn-restart').addEventListener('click', () => {
+      document.getElementById('victory-modal').style.display = 'none';
+      if (gameInstance) {
+        gameInstance.scene.scenes[0].scene.restart();
+      }
+    });
+  </script>
+</body>
+</html>
