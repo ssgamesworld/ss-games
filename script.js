@@ -38,11 +38,13 @@ function initMobileMenu() {
  */
 function createGameCardHTML(game, isInsideGamesDir = false) {
   const pathPrefix = isInsideGamesDir ? '../' : '';
-  const thumbSrc = pathPrefix + game.thumbnail;
+  const thumbSrc = pathPrefix + (game.thumbnail || 'assets/images/ss-games-logo.png');
+  const playUrl = game.route || game.playUrl;
+  const isPlayable = game.status === 'playable' || game.isPlayable === true || !!playUrl;
   
   let actionButton = '';
-  if (game.isPlayable && game.playUrl) {
-    const playHref = pathPrefix + game.playUrl;
+  if (isPlayable && playUrl) {
+    const playHref = pathPrefix + playUrl;
     actionButton = `
       <a href="${playHref}" class="btn btn-primary btn-sm" aria-label="Play ${game.title} now">
         <span>Play Now</span>
@@ -59,21 +61,23 @@ function createGameCardHTML(game, isInsideGamesDir = false) {
     `;
   }
 
-  const badgeClass = game.isPlayable ? 'badge-playable' : 'badge-coming';
+  const badgeText = game.badge || (isPlayable ? 'Playable' : 'Coming Soon');
+  const badgeClass = isPlayable ? 'badge-playable' : 'badge-coming';
+  const tagline = game.tagline || (game.category + ' Challenge');
 
   return `
     <article class="game-card" data-category="${game.category}" data-id="${game.id}">
       <div class="game-card-thumb-wrapper">
         <img src="${thumbSrc}" alt="${game.title} preview" class="game-card-thumb" loading="lazy">
-        <span class="game-badge ${badgeClass}">${game.badge}</span>
+        <span class="game-badge ${badgeClass}">${badgeText}</span>
         <span class="game-category-tag">${game.category}</span>
       </div>
       <div class="game-card-body">
         <h3 class="game-card-title">${game.title}</h3>
-        <p class="game-card-tagline">${game.tagline}</p>
+        <p class="game-card-tagline">${tagline}</p>
         <p class="game-card-desc">${game.description}</p>
         <div class="game-card-footer">
-          <span style="font-size: 0.8rem; color: #64748b;">${game.isPlayable ? 'HTML5 Canvas' : 'In Dev'}</span>
+          <span style="font-size: 0.8rem; color: #64748b;">${isPlayable ? 'HTML5 Canvas' : 'In Dev'}</span>
           ${actionButton}
         </div>
       </div>
