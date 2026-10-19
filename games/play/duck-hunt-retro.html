@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duck Hunt Retro — Play on SS GAMES</title>
+  <meta name="description" content="Play Duck Hunt Retro free online browser game on SS GAMES. Click flying wild ducks as they take off from marsh grass before they escape.">
+  <link rel="canonical" href="https://ss-games.pages.dev/games/play/duck-hunt-retro.html">
+  <link rel="icon" type="image/png" href="../../assets/images/ss-games-logo.png">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; }
+    body {
+      background: #030712;
+      color: #f8fafc;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    header {
+      width: 100%;
+      background: rgba(15, 23, 42, 0.9);
+      border-bottom: 1px solid rgba(0, 240, 255, 0.25);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(8px);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #00f0ff;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: 1.5px;
+    }
+    .brand img { width: 32px; height: 32px; border-radius: 6px; }
+    .back-btn {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 0.88rem;
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 6px 14px;
+      border-radius: 20px;
+      transition: all 0.2s;
+    }
+    .back-btn:hover { color: #00f0ff; border-color: #00f0ff; }
+    .game-container {
+      margin-top: 18px;
+      position: relative;
+      background: #090d16;
+      border: 2px solid rgba(0, 240, 255, 0.4);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 35px rgba(0, 240, 255, 0.2);
+    }
+    canvas { display: block; background: #030712; cursor: pointer; }
+    .hud-bar {
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 14px;
+      font-size: 0.95rem;
+      color: #94a3b8;
+    }
+    .score-badge { color: #ffd700; font-weight: 700; font-size: 1.1rem; }
+    .controls-hint {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: #64748b;
+      max-width: 600px;
+      text-align: center;
+      line-height: 1.4;
+    }
+    .modal-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(3, 7, 18, 0.88);
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .btn-reset {
+      background: linear-gradient(135deg, #00f0ff, #0284c7);
+      color: #030712;
+      border: none;
+      padding: 10px 26px;
+      border-radius: 20px;
+      font-weight: 800;
+      cursor: pointer;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../../index.html" class="brand">
+      <img src="../../assets/images/ss-games-logo.png" alt="SS GAMES">
+      SS GAMES
+    </a>
+    <a href="../../games.html" class="back-btn">&larr; Back to Games</a>
+  </header>
+
+  <div class="hud-bar">
+    <div><strong>Duck Hunt Retro</strong> &bull; <span style="color:#00f0ff;">Arcade</span></div>
+    <div>Score: <span class="score-badge" id="scoreVal">0</span></div>
+  </div>
+
+  <div class="game-container">
+    <canvas id="gameCanvas" width="600" height="400"></canvas>
+    <div id="gameOverModal" class="modal-overlay">
+      <h2 style="color:#ffd700; margin-bottom:8px;">Game Over</h2>
+      <p style="color:#94a3b8;">Final Score: <span id="finalScore" style="color:#00f0ff; font-weight:700;">0</span></p>
+      <button class="btn-reset" onclick="resetGame(); document.getElementById('gameOverModal').style.display='none';">Play Again</button>
+    </div>
+  </div>
+
+  <p class="controls-hint">Click flying wild ducks as they take off from marsh grass before they escape.</p>
+
+  <script>
+    function updateScore(s) {
+      document.getElementById('scoreVal').textContent = s;
+    }
+    function showGameOver(s) {
+      document.getElementById('finalScore').textContent = s;
+      document.getElementById('gameOverModal').style.display = 'flex';
+    }
+    
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    let score = 0;
+    let targets = [];
+    let running = true;
+    let timer = 0;
+
+    function resetGame() {
+      score = 0;
+      targets = [];
+      running = true;
+      timer = 0;
+      updateScore(0);
+      spawnInitial();
+    }
+
+    function spawnInitial() {
+      for (let i = 0; i < 6; i++) {
+        targets.push({
+          x: Math.random() * (canvas.width - 60) + 30,
+          y: Math.random() * (canvas.height - 60) + 30,
+          r: Math.random() * 14 + 18,
+          dx: (Math.random() - 0.5) * 3,
+          dy: (Math.random() - 0.5) * 3,
+          color: (Math.random() > 0.5 ? '#00f0ff' : '#ec4899')
+        });
+      }
+    }
+    spawnInitial();
+
+    canvas.addEventListener('pointerdown', (e) => {
+      if (!running) return;
+      const rect = canvas.getBoundingClientRect();
+      const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+      let hit = false;
+      targets.forEach((t, idx) => {
+        const dist = Math.hypot(t.x - mx, t.y - my);
+        if (dist < t.r) {
+          hit = true;
+          score += 25;
+          updateScore(score);
+          targets.splice(idx, 1);
+          // Spawn new target
+          targets.push({
+            x: Math.random() * (canvas.width - 60) + 30,
+            y: Math.random() * (canvas.height - 60) + 30,
+            r: Math.random() * 14 + 18,
+            dx: (Math.random() - 0.5) * 3.5,
+            dy: (Math.random() - 0.5) * 3.5,
+            color: (Math.random() > 0.5 ? '#00f0ff' : '#ffd700')
+          });
+        }
+      });
+    });
+
+    function loop() {
+      requestAnimationFrame(loop);
+      if (!running) return;
+      ctx.fillStyle = '#030712';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Cyber Grid
+      ctx.strokeStyle = 'rgba(0, 240, 255, 0.05)';
+      ctx.lineWidth = 1;
+      for (let x = 0; x < canvas.width; x += 40) {
+        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke();
+      }
+      for (let y = 0; y < canvas.height; y += 40) {
+        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke();
+      }
+
+      targets.forEach(t => {
+        t.x += t.dx; t.y += t.dy;
+        if (t.x < t.r || t.x > canvas.width - t.r) t.dx *= -1;
+        if (t.y < t.r || t.y > canvas.height - t.r) t.dy *= -1;
+
+        ctx.fillStyle = t.color;
+        ctx.shadowColor = t.color; ctx.shadowBlur = 10;
+        ctx.beginPath();
+        ctx.arc(t.x, t.y, t.r, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      });
+
+      // Ambient Instructions
+      ctx.fillStyle = '#94a3b8';
+      ctx.font = '13px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('Tap or Click glowing entities to clear and score!', canvas.width / 2, 25);
+    }
+    requestAnimationFrame(loop);
+  
+  </script>
+</body>
+</html>
